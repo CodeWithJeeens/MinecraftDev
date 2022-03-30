@@ -1,0 +1,5 @@
+package net.homecastle.oneblock.listener;
+
+public class FirstJoin {
+
+}

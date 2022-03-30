@@ -1,0 +1,18 @@
+package de.codebyjeeens.lobby.listener;
+
+import org.bukkit.Bukkit;
+import org.bukkit.event.Listener;
+import de.codebyjeeens.lobby.Main;
+
+public class JoinListener implements Listener {
+
+	private Main main;
+	
+	public JoinListener(Main main) {
+		this.main main;
+		Bukkit.getPluginManager().registerEvents(this, main);
+	}
+		
+	
+	
+}

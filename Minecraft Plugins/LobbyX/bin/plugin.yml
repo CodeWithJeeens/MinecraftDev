@@ -1,0 +1,4 @@
+name: LobbyX
+version: 1.0
+main: de.codebyjeeens.lobby.Main
+commands:

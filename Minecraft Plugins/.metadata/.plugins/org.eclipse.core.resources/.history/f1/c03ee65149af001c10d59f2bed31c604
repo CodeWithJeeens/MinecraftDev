@@ -1,0 +1,21 @@
+package net.homecastle.oneblock;
+
+import org.bukkit.Bukkit;
+import org.bukkit.plugin.java.JavaPlugin;
+
+
+public class Main extends JavaPlugin {
+	
+	@Override
+	public void onEnable() {
+		Bukkit.getConsoleSender().sendMessage("§aOnBlock wurde Erfolgrich Gestartet!");
+		
+		
+	}
+	
+	@Override
+	public void onDisable() {
+		Bukkit.getConsoleSender().sendMessage("§cOnBlock wurde Erfolgrich Beendet!");
+	}
+
+}

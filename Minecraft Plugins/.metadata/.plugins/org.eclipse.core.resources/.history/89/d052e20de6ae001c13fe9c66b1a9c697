@@ -1,0 +1,18 @@
+package de.codebyjeeens.lobby.utils;
+
+import org.bukkit.Material;
+import org.bukkit.entity.Player;
+
+public class LobbyInv {
+
+	Player p;
+	
+	public LobbyInv(Player p) {
+		this.p = p;
+	}
+	
+	public void setInv() {
+		p.getInventory().setItem(0, neew ItemApi("§l§bTeleporter", Material.COMPASS, (Byte) 0, 1).build());
+	}
+	
+}

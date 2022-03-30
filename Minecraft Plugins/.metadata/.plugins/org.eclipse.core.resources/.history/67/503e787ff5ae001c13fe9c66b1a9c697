@@ -1,0 +1,21 @@
+package de.codebyjeeens.lobby;
+
+import org.bukkit.plugin.java.JavaPlugin;
+
+import de.codebyjeeens.lobby.listener.JoinListener;
+import de.codebyjeeens.lobby.listener.OpenCompass;
+
+public class Main extends JavaPlugin {
+
+	@Override
+	public void onEnable() {
+		new JoinListener(this);
+		new OpenCompass(this);
+	}
+	
+	@Override
+	public void onDisable() {
+		
+	}
+	
+}

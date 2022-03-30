@@ -1,0 +1,47 @@
+package net.homecastle.oneblock.listener;
+
+import java.sql.Date;
+import java.text.SimpleDateFormat;
+
+import org.bukkit.Bukkit;
+import org.bukkit.configuration.file.YamlConfiguration;
+import org.bukkit.entity.Player;
+import org.bukkit.event.EventHandler;
+import org.bukkit.event.Listener;
+import org.bukkit.event.player.PlayerJoinEvent;
+
+import net.homecastle.oneblock.Main;
+
+public class Join implements Listener{
+	
+	public Main main;
+	
+	public Join(Main main) {
+		this.main = main;
+		Bukkit.getPluginManager().registerEvents(this, main);
+	}
+	
+	@EventHandler
+	public void OnJoin( PlayerJoinEvent e) {
+		
+		Player p = e.getPlayer();
+		
+	    uuidConfigFile = new File(Main.getPlugin().getDataFolder(), p.getUniqueId()+".yml");
+	    FileConfiguration uuidConfig = YamlConfiguration.loadConfiguration(uuidConfigFile);
+	    DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
+	    Date date = new Date();
+		
+		e.setJoinMessage("§7§l[§a§l+§7§l]");
+		
+		if(!p.hasPlayedBefore()) {
+			
+			//wenn der Spieler schon da war
+			e.getPlayer().sendMessage("Du bist neu");
+			
+		}else {
+			//wenn der Spieler noch nicht da war
+			e.getPlayer().sendMessage("Du warst schon da");		}
+		
+	}
+
+}

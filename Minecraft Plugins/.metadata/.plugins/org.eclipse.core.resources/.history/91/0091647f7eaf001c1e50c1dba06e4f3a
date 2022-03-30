@@ -1,0 +1,47 @@
+package net.homecastle.oneblock.listener;
+
+import org.bukkit.Bukkit;
+import org.bukkit.Location;
+import org.bukkit.Material;
+import org.bukkit.World;
+import org.bukkit.entity.Player;
+import org.bukkit.event.EventHandler;
+import org.bukkit.event.Listener;
+import org.bukkit.event.player.PlayerJoinEvent;
+
+
+import net.homecastle.oneblock.Main;
+import net.minecraft.server.v1_8_R3.Item;
+
+public class Join implements Listener{
+	
+	public Main main;
+	
+	public Join(Main main) {
+		this.main = main;
+		Bukkit.getPluginManager().registerEvents(this, main);
+	}
+	
+	@EventHandler
+	public void OnJoin( PlayerJoinEvent e) {
+				
+		Player p = e.getPlayer();
+		
+		World world = Bukkit.getServer().getWorld("world");
+		
+		Location Spawn = new Location(world, 0.5, 66, 0.5, 92, 0);
+		Location BlockSpawn = new Location(Bukkit.getWorld("world"), 0, 65, 0);
+		
+		Block b = new Item
+		
+		if(!p.hasPlayedBefore()) {
+			e.setJoinMessage("§7§l[§a§l+§7§l]");
+			BlockSpawn.getBlock().setType(Material.DIRT);
+			p.teleport(Spawn);
+		}
+		else {
+			e.setJoinMessage("§7§l[§a§l+§7§l]");
+			p.teleport(Spawn);
+		}
+	}		
+}

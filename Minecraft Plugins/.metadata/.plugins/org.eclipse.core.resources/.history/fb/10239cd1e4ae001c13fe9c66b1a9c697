@@ -1,0 +1,18 @@
+package de.codebyjeeens.lobby.utils;
+
+import org.bukkit.Material;
+import org.bukkit.inventory.ItemStack;
+import org.bukkit.inventory.meta.ItemMeta;
+
+public class ItemApi {
+
+	ItemStack itemStack;
+	ItemMeta itemMeta;
+	
+	public ItemApi(String displayname, Material material, byte subid, int amount) {
+		itemStack = new ItemStack(material, amount, subid);
+		itemMeta = new ItemMeta();
+		itemMeta.setDisplayName(displayname);
+	}
+	
+}

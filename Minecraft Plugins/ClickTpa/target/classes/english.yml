@@ -1,0 +1,92 @@
+# Config message for TpaClick
+# Please follow the UTF-8 guide
+
+#
+# Messages
+#
+
+Player-only-command: '&cOnly players can use this command!'
+
+Insufficient-permission: '&cYou do not have sufficient permission!'
+
+Player-deny-tpa-message: '&cTeleportation request has been denied.'
+
+Target-deny-tpa-message: '&cTeleportation request has been denied.'
+
+
+Target-teleportion-canceled: '&cTeleportation canceled...'
+
+Player-got-accepted-tpa: '&bTeleportation request has been accepted.'
+
+Player-countdown-until-tpa: '&eTeleporting in 3 seconds...'
+
+Player-no-pendingtpa-message: '&cYou do not have a pending request!'
+
+Target-accepted-tpa-request: '&bRequest for teleportation is accepted.'
+
+No-player-found: '&cThis player does not exist!'
+
+Player-teleporting-self: '&cYou can not teleport yourself!'
+
+Player-already-requested: '&cYou already requested, please wait..'
+
+Player-teleportation-request-expire: '&cTeleportation request has expired.'
+
+Target-teleportation-request-expire: '&cTeleportation request has expired.'
+
+Player-currently-teleporting: '&bTeleporting...'
+
+Target-currently-teleporting: '&bTeleporting...'
+
+# Seconds until tpa
+# Please use whole numbers
+
+Seconds-until-tpa: 3
+
+
+
+# Becareful in this part!
+# This is when a player uses not enough args
+# For example, when a player does '/tpa', it will say 'Usage: /tpa <player>'
+# So please fit the correct command under the correct message!
+# P.S '/tpohere' is also '/s' (essentials-type command).
+
+
+Tpa-usage: '&cUse: /tpa <player>'
+
+Tpaccept-usage: '&cUse: /tpaccept <player>'
+
+Tpdeny-usage: '&cUse: /tpadeny <player>'
+
+Tpo-usage: '&cUse: /tpo <player>'
+
+Tpohere-usage: '&cUse: /tpohere <player> or /s <player>'
+
+
+
+# This section is when a player gets a tpa request
+# Since the code used is broken into many parts, there will be many messages.
+# Be careful!
+
+# Helpful tip: to do a new line please use '\n'.
+# Use '%player%' for the player who sent the request.
+# Use '%accept%' for the 'Click-to-accept' message.
+# Use '%deny%' for the 'Click-to-deny' message.
+# Use '%target%' for the player who they wanted to teleport to, and for the 'Player-sent-request' message.
+# Example: /tpa <player>, where <player> is '%target%'.
+
+Player-sent-request: '&eYES have sent a request to &6%target%'
+
+Tpa-message: '&6%player% &e has requested to teleport to you. &e\n &eClick %accept% &eto accept or click %deny% &eto deny. &e\n &e The request expires in 120 seconds.'
+
+Click-to-accept: '&a&l&n[ACCEPT]'
+Click-to-deny: '&c&l&n[DENY]'
+
+Hover-message-on-accept: '&aClick to accept'
+Hover-message-on-deny: '&cClick to deny'
+
+
+#~~~~~~~~~~~~~~~~~~
+# More Coming Soon!
+#~~~~~~~~~~~~~~~~~~
+

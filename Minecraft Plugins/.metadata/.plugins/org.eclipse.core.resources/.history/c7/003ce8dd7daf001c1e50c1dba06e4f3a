@@ -1,0 +1,28 @@
+package net.homecastle.oneblock.utils;
+
+import org.bukkit.Material;
+import org.bukkit.inventory.ItemStack;
+import org.bukkit.inventory.meta.ItemMeta;
+
+public class CreateBlock {
+	ItemStack itemStack;
+	ItemMeta itemMeta;
+	
+	public CreateBlock(String displayname, Material material, byte subid, int amount) {
+		itemStack = new ItemStack(material, amount, subid);
+		itemMeta = itemStack.getItemMeta();
+		itemMeta.setDisplayName(displayname);
+	}
+		
+	public ItemStack build() {
+		itemStack.setItemMeta(itemMeta);
+		return itemStack;
+		
+	}
+	
+	public void Craete() {
+		MyBlock = new testBlock("§b§lTeleporter", Material.COMPASS, (byte) 0, 1));
+	}
+	
+}
+

@@ -1,0 +1,5 @@
+name: OneBlock
+version: 1.0.0
+author: CodeByJeeens
+main: net.homecastle.oneblock.Main
+commands:

@@ -1,0 +1,10 @@
+package net.homecastle.oneblock.utils;
+
+import org.bukkit.Material;
+
+public class MyBlock {
+	
+	public void Craete() {
+		block = new CreateBlock("§b§lTeleporter", Material.COMPASS, (byte) 0, 1));
+	}
+}

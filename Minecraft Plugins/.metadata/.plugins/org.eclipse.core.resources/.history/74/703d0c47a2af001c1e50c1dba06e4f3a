@@ -1,0 +1,46 @@
+package net.homecastle.oneblock.listener;
+
+
+
+
+
+import org.bukkit.Bukkit;
+import org.bukkit.Location;
+import org.bukkit.World;
+import org.bukkit.event.EventHandler;
+import org.bukkit.event.Listener;
+import org.bukkit.event.block.BlockBreakEvent;
+
+
+import net.homecastle.oneblock.Main;
+
+
+public class BrakeBlock implements Listener{
+	
+	public Main main;
+	
+	public BrakeBlock (Main main) {
+		this.main = main;
+		Bukkit.getPluginManager().registerEvents(this, main);
+	}
+	
+	
+	@EventHandler
+    public void onBrakeBlock (BlockBreakEvent e) {
+		
+
+		
+		World world = Bukkit.getServer().getWorld("world");
+
+		
+		Location BlockSpawn = new Location(world, 0, 65, 0);
+		
+		if (e.getBlock().getLocation().equals(BlockSpawn)) {
+			//e.getBlock().getDrops(Material.DIAMOND, 1);
+			//e.setCancelled(true);
+			
+		}
+		
+	}
+
+}

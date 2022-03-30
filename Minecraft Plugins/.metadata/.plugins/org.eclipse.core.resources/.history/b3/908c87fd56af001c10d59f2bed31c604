@@ -1,0 +1,48 @@
+package net.homecastle.oneblock.listener;
+
+import java.io.File;
+import java.io.IOException;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
+
+import org.bukkit.Bukkit;
+import org.bukkit.configuration.file.FileConfiguration;
+import org.bukkit.configuration.file.YamlConfiguration;
+import org.bukkit.entity.Player;
+import org.bukkit.event.EventHandler;
+import org.bukkit.event.Listener;
+import org.bukkit.event.player.PlayerLoginEvent;
+
+import net.homecastle.oneblock.Main;
+
+public class FirstJoin implements Listener {
+
+	
+	public Main main;
+	
+	public FirstJoin(Main main) {
+		this.main = main;
+		Bukkit.getPluginManager().registerEvents(this, main);
+	}
+	
+	@EventHandler
+	public void OnFirstJoin(PlayerLoginEvent e) {
+		
+		Player p = e.getPlayer();
+		if(!p.hasPlayedBefore()) {
+			
+			//wenn der Spieler schon da war
+			p.sendMessage("§aDu wasr da!");
+			
+		}else {
+			//wenn der Spieler noch nicht da war
+			p.sendMessage("Du bist neu hir");
+		}
+		
+
+		
+	}
+	
+}

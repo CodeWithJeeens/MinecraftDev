@@ -1,0 +1,47 @@
+package net.homecastle.oneblock.listener;
+
+
+import java.io.File;
+import java.io.IOException;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
+import org.bukkit.Bukkit;
+import org.bukkit.configuration.file.FileConfiguration;
+import org.bukkit.configuration.file.YamlConfiguration;
+import org.bukkit.entity.Player;
+import org.bukkit.event.EventHandler;
+import org.bukkit.event.Listener;
+import org.bukkit.event.player.PlayerJoinEvent;
+
+import net.homecastle.oneblock.Main;
+
+public class Join implements Listener{
+	
+	public Main main;
+	
+	public Join(Main main) {
+		this.main = main;
+		Bukkit.getPluginManager().registerEvents(this, main);
+	}
+	
+	@EventHandler
+	public void OnJoin( PlayerJoinEvent e) {
+		
+		Player p = e.getPlayer();
+		
+		e.setJoinMessage("§7§l[§a§l+§7§l]");
+		
+		if(!p.hasPlayedBefore()) {
+			
+			e.setJoinMessage("§7§l[§a§l+§7§l]");
+			
+			
+		}
+		
+		else {
+			
+		}
+
+}

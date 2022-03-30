@@ -1,0 +1,17 @@
+package de.codebyjeeens.lobby.utils;
+
+import org.bukkit.entity.Player;
+
+public class LobbyInv {
+
+	Player p;
+	
+	public LobbyInv(Player p) {
+		this.p = p;
+	}
+	
+	public void setInv() {
+		
+	}
+	
+}

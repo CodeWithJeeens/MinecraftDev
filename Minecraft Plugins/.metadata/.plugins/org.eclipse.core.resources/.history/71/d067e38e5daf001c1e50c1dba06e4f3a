@@ -1,0 +1,35 @@
+package net.homecastle.oneblock.utils;
+
+import org.bukkit.Bukkit;
+import org.bukkit.entity.Player;
+import org.bukkit.event.EventHandler;
+import org.bukkit.event.Listener;
+import org.bukkit.event.player.PlayerLoginEvent;
+
+import net.homecastle.oneblock.Main;
+
+public class FirstJoin implements Listener {
+
+	public void PlayerJoin() {
+		
+	
+	
+	@EventHandler
+	public void OnFirstJoin(PlayerLoginEvent e) {
+		
+		Player p = e.getPlayer();
+		
+		if(!p.hasPlayedBefore()) {
+			
+			//wenn der Spieler schon da war
+			e.getPlayer().sendMessage("Du bist neu");
+			
+		}else {
+			//wenn der Spieler noch nicht da war
+			e.getPlayer().sendMessage("Du warst schon da");		}
+		
+
+		
+	}
+}
+}

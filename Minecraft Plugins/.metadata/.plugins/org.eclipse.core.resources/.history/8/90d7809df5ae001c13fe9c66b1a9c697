@@ -1,0 +1,20 @@
+package de.codebyjeeens.lobby;
+
+import org.bukkit.event.Listener;
+import org.bukkit.plugin.java.JavaPlugin;
+
+import de.codebyjeeens.lobby.listener.JoinListener;
+
+public class Main extends JavaPlugin implements Listener{
+
+	@Override
+	public void onEnable() {
+		new JoinListener(this);
+	}
+	
+	@Override
+	public void onDisable() {
+		
+	}
+	
+}
